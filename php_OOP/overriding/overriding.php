@@ -1,4 +1,5 @@
 <?php 	
+namespace overriding;
 
 	class Father
 	{
