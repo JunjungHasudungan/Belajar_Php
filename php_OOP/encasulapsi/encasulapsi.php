@@ -50,7 +50,7 @@
 
 		public function getPrivate()
 		{
-			echo "<h3>All list in protected: </h3>";
+			echo "<h3>All list in private: </h3>";
 			foreach ($this->VariablePrivate as $n => $value) {
 				$no = $n + 1;
 				echo "[$no] .$value <br>";
