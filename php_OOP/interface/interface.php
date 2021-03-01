@@ -16,23 +16,68 @@
 interface Human
 {
 	// deklarasi method
-	public function getWalk();
+	public function getName();
+	public function setName($inputFirstName, $inputLastName);
 	public function __construct();
 } 	
 
-class Ayah implements Human 
+class Father implements Human 
 {
-	public $walk;
+	public $fName, $lName;
+	
 	public function __construct()
 	{
-	 echo "ini dari function construct <br>";
+		echo "Belajar Menggunakan interface dalam OOP <br>";
+	}
+
+	public function getName()
+	{
+		$fullName =	"First Name:  {$this->fName} <br>
+					 Last Name: {$this->lName}<hr>";
+		return $fullName;
+		
+		 
 	}
 	
-	public function getWalk()
+	public function setName($inputFirstName, $inputLastName)
 	{
-		return "sedang berjalan";
+		$this->fName = $inputFirstName;
+		$this->lName = $inputLastName;	
 	}
 }
 
-$ayah = new Ayah;
-echo $ayah->getWalk();
+class Child implements Human 
+{
+	public $namaDepan, $namaBelakang;
+	
+	public function __construct()
+	{
+		echo "Ini dari class chiild <br><br>";
+	}
+
+	public function getName()
+	{
+		$fullName =	"First Name:  {$this->namaDepan} <br>
+					 Last Name: {$this->namaBelakang}";
+		return $fullName;
+		
+		 
+	}
+	
+	public function setName($inputFirstName, $inputLastName)
+	{
+		$this->namaDepan = $inputFirstName;
+		$this->namaBelakang = $inputLastName;	
+	}
+}
+
+
+$father = new Father;
+$son = New Child;
+
+$father->setName("Hasudungan", "Sitorus");
+echo $father->getName(); 
+
+$son->setName("Caca", "Cahyana");
+echo $son->getName(); 
+

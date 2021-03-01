@@ -2,14 +2,16 @@
 
  class Hitung
  {
-  public $harga=0;
-  public $diskon=0;
-  function Cek_Harga(){
-   //nilai diskon = nilai harga dikali nilai diskon dibagi 100
-   $hasil=$this->harga*($this->diskon/100);
-   //harga setelah di diskon adalah harga barang dikurangi nilai diskon
-   return($this->harga - $hasil);
-  }
+    
+    public $harga = 0;  
+    public $diskon = 0;
+    
+    function Cek_Harga(){
+    //nilai diskon = nilai harga dikali nilai diskon dibagi 100
+    $hasil = $this->harga * ( $this->diskon/100 );
+    //harga setelah di diskon adalah harga barang dikurangi nilai diskon
+    return ($this->harga - $hasil);
+    }
  }
 
 ?>

@@ -1,25 +1,35 @@
 <?php 	
 
-	class Father
+	class Human
 	{
 
-		public $name, $age;
+		private $name, $age;
+		private $index = 0;
 
 
 		public function __construct($name, $age)
 		{
 			$this->name = $name;
 			$this->age = $age;
+			$this->index += 1;
 		}
 
 		public function getInfo()
 		{
-			$info = "My Father name is : {$this->name} <br> 
-			and him age is : {$this->age}";
+			$info = "No :{$this->index}<br> Name : {$this->name} <br> 
+			Age : {$this->age}<br>";
 			return $info;
+		}
+
+		public function setInfo($inputName, $inputAge){
+			$this->name = $inputName;
+			$this->age = $inputAge;
 		}
 	}
 
-		$father = new Father("Retno", "65");
- 		echo $father->getInfo();
+		$human1 = new Human("Retno", 25);
+		$human2 = new Human("Hasudungan", 25);
+ 		echo $human1->getInfo();
+		echo "<br>";
+		echo $human2->getInfo();
  ?>

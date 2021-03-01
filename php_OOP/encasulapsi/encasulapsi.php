@@ -1,5 +1,5 @@
 <?php 
-	// 
+	
 	class Father
 	{
 		public $variablePublic = ['apple','jambo'];
@@ -86,6 +86,7 @@
 	$hasudungan->sonGetPublic();
 	echo "<hr>";
 	$hasudungan->sonGetProtected();
+	$hasudungan->setProtected('glassess');
 	echo "<hr>";
 	$sitorus->getPrivate();
 
